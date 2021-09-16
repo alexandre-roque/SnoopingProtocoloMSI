@@ -1,0 +1,758 @@
+Analysis & Synthesis report for Snooping
+Tue Sep 14 13:24:35 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis IP Cores Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Source assignments for memRam:Mem|altsyncram:altsyncram_component|altsyncram_29i1:auto_generated
+ 12. Parameter Settings for User Entity Instance: counter:Counter|lpm_counter:LPM_COUNTER_component
+ 13. Parameter Settings for User Entity Instance: memRam:Mem|altsyncram:altsyncram_component
+ 14. altsyncram Parameter Settings by Entity Instance
+ 15. Port Connectivity Checks: "cache:P3"
+ 16. Port Connectivity Checks: "cache:P1"
+ 17. Port Connectivity Checks: "cache:P0|MaquinaDeEstadosOuvinte:maquinaOuvinte"
+ 18. Port Connectivity Checks: "cache:P0"
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Sep 14 13:24:35 2021           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; Snooping                                        ;
+; Top-level Entity Name              ; Snooping                                        ;
+; Family                             ; Cyclone IV GX                                   ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 2                                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total GXB Receiver Channel PCS     ; 0                                               ;
+; Total GXB Receiver Channel PMA     ; 0                                               ;
+; Total GXB Transmitter Channel PCS  ; 0                                               ;
+; Total GXB Transmitter Channel PMA  ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; Snooping           ; Snooping           ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
++----------------------------------+-----------------+-----------------------------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                         ; File Name with Absolute Path                                                             ; Library ;
++----------------------------------+-----------------+-----------------------------------+------------------------------------------------------------------------------------------+---------+
+; Snooping.v                       ; yes             ; User Verilog HDL File             ; C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/Snooping.v                ;         ;
+; MaquinaDeEstados.v               ; yes             ; User Verilog HDL File             ; C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/MaquinaDeEstados.v        ;         ;
+; MaquinaDeEstadosOuvinte.v        ; yes             ; User Verilog HDL File             ; C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/MaquinaDeEstadosOuvinte.v ;         ;
+; cache.v                          ; yes             ; User Verilog HDL File             ; C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/cache.v                   ;         ;
+; upcount.v                        ; yes             ; User Verilog HDL File             ; C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/upcount.v                 ;         ;
+; MemInst.v                        ; yes             ; User Verilog HDL File             ; C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/MemInst.v                 ;         ;
+; memRam.mif                       ; yes             ; User Memory Initialization File   ; C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/memRam.mif                ;         ;
+; memRam.v                         ; yes             ; User Wizard-Generated File        ; C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/memRam.v                  ;         ;
+; counter.v                        ; yes             ; Auto-Found Wizard-Generated File  ; C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/counter.v                 ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                      ; f:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.tdf                        ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                      ; f:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc                       ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                      ; f:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                         ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                      ; f:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc                        ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                      ; f:/altera/13.0sp1/quartus/libraries/megafunctions/cmpconst.inc                           ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                      ; f:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc                        ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                      ; f:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc                        ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                      ; f:/altera/13.0sp1/quartus/libraries/megafunctions/dffeea.inc                             ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                      ; f:/altera/13.0sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc                ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                      ; f:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                         ;         ;
+; db/cntr_vhi.tdf                  ; yes             ; Auto-Generated Megafunction       ; C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/db/cntr_vhi.tdf           ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                      ; f:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                         ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                      ; f:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                  ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                      ; f:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                            ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                      ; f:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                          ;         ;
+; altrom.inc                       ; yes             ; Megafunction                      ; f:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                             ;         ;
+; altram.inc                       ; yes             ; Megafunction                      ; f:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                             ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                      ; f:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                           ;         ;
+; db/altsyncram_29i1.tdf           ; yes             ; Auto-Generated Megafunction       ; C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/db/altsyncram_29i1.tdf    ;         ;
++----------------------------------+-----------------+-----------------------------------+------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 2                ;
+; DSP block 9-bit elements ; 0                ;
+; Maximum fan-out node     ; RunFirst         ;
+; Maximum fan-out          ; 1                ;
+; Total fan-out            ; 2                ;
+; Average fan-out          ; 0.50             ;
++--------------------------+------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; |Snooping                  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 2    ; 0            ; |Snooping           ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                ;
++--------+--------------+---------+--------------+--------------+---------------------------+--------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance           ; IP Include File                                                          ;
++--------+--------------+---------+--------------+--------------+---------------------------+--------------------------------------------------------------------------+
+; Altera ; LPM_COUNTER  ; N/A     ; N/A          ; N/A          ; |Snooping|counter:Counter ; C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/counter.v ;
+; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |Snooping|memRam:Mem      ; C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/memRam.v  ;
++--------+--------------+---------+--------------+--------------+---------------------------+--------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                   ;
++-------------------------------------------------------------------------------------------------+--------------------+
+; Register name                                                                                   ; Reason for Removal ;
++-------------------------------------------------------------------------------------------------+--------------------+
+; cache:P3|upcount:Tstep|Q[0..2]                                                                  ; Lost fanout        ;
+; cache:P1|upcount:Tstep|Q[0..2]                                                                  ; Lost fanout        ;
+; cache:P0|upcount:Tstep|Q[0..2]                                                                  ; Lost fanout        ;
+; counter:Counter|lpm_counter:LPM_COUNTER_component|cntr_vhi:auto_generated|counter_reg_bit[0..7] ; Lost fanout        ;
+; Total Number of Removed Registers = 17                                                          ;                    ;
++-------------------------------------------------------------------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Source assignments for memRam:Mem|altsyncram:altsyncram_component|altsyncram_29i1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------+
+; Assignment                      ; Value              ; From ; To                                 ;
++---------------------------------+--------------------+------+------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                  ;
++---------------------------------+--------------------+------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:Counter|lpm_counter:LPM_COUNTER_component ;
++------------------------+---------------+-------------------------------------------------------+
+; Parameter Name         ; Value         ; Type                                                  ;
++------------------------+---------------+-------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON            ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF           ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON            ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF           ; IGNORE_CASCADE                                        ;
+; LPM_WIDTH              ; 8             ; Signed Integer                                        ;
+; LPM_DIRECTION          ; UP            ; Untyped                                               ;
+; LPM_MODULUS            ; 0             ; Untyped                                               ;
+; LPM_AVALUE             ; UNUSED        ; Untyped                                               ;
+; LPM_SVALUE             ; UNUSED        ; Untyped                                               ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED   ; Untyped                                               ;
+; DEVICE_FAMILY          ; Cyclone IV GX ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL        ; Untyped                                               ;
+; CARRY_CHAIN_LENGTH     ; 48            ; CARRY_CHAIN_LENGTH                                    ;
+; NOT_GATE_PUSH_BACK     ; ON            ; NOT_GATE_PUSH_BACK                                    ;
+; CARRY_CNT_EN           ; SMART         ; Untyped                                               ;
+; LABWIDE_SCLR           ; ON            ; Untyped                                               ;
+; USE_NEW_VERSION        ; TRUE          ; Untyped                                               ;
+; CBXI_PARAMETER         ; cntr_vhi      ; Untyped                                               ;
++------------------------+---------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memRam:Mem|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------+
+; Parameter Name                     ; Value                ; Type                        ;
++------------------------------------+----------------------+-----------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                     ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE              ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                     ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                     ;
+; WIDTH_A                            ; 7                    ; Signed Integer              ;
+; WIDTHAD_A                          ; 5                    ; Signed Integer              ;
+; NUMWORDS_A                         ; 32                   ; Signed Integer              ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                     ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                     ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                     ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                     ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                     ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                     ;
+; WIDTH_B                            ; 1                    ; Untyped                     ;
+; WIDTHAD_B                          ; 1                    ; Untyped                     ;
+; NUMWORDS_B                         ; 1                    ; Untyped                     ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                     ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                     ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                     ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                     ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                     ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                     ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                     ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                     ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                     ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                     ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                     ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                     ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer              ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                     ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                     ;
+; BYTE_SIZE                          ; 8                    ; Untyped                     ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                     ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
+; INIT_FILE                          ; memRam.mif           ; Untyped                     ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                     ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                     ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                     ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                     ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                     ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                     ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                     ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                     ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                     ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                     ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                     ;
+; DEVICE_FAMILY                      ; Cyclone IV GX        ; Untyped                     ;
+; CBXI_PARAMETER                     ; altsyncram_29i1      ; Untyped                     ;
++------------------------------------+----------------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                       ;
++-------------------------------------------+--------------------------------------------+
+; Name                                      ; Value                                      ;
++-------------------------------------------+--------------------------------------------+
+; Number of entity instances                ; 1                                          ;
+; Entity Instance                           ; memRam:Mem|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                ;
+;     -- WIDTH_A                            ; 7                                          ;
+;     -- NUMWORDS_A                         ; 32                                         ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                               ;
+;     -- WIDTH_B                            ; 1                                          ;
+;     -- NUMWORDS_B                         ; 1                                          ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                     ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                               ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                       ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                  ;
++-------------------------------------------+--------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cache:P3"                                                                                          ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                ; Type   ; Severity ; Details                                                                             ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; tagProcessador      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; Run                 ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; valorRetorno        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; auxWriteBackOuvinte ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cache:P1"                                                                                          ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                ; Type   ; Severity ; Details                                                                             ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; tagProcessador[1]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; tagProcessador[0]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; Run                 ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; valorRetorno        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; auxWriteBackOuvinte ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cache:P0|MaquinaDeEstadosOuvinte:maquinaOuvinte"                                         ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; writeback ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Run       ; Input  ; Info     ; Stuck at VCC                                                                        ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cache:P0"                                                                                          ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                ; Type   ; Severity ; Details                                                                             ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; tagProcessador      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Run                 ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; valorRetorno        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; auxWriteBackOuvinte ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Sep 14 13:24:33 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Snooping -c Snooping
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file snooping.v
+    Info (12023): Found entity 1: Snooping
+Info (12021): Found 1 design units, including 1 entities, in source file simula.v
+    Info (12023): Found entity 1: simula
+Info (12021): Found 1 design units, including 1 entities, in source file maquinadeestados.v
+    Info (12023): Found entity 1: MaquinaDeEstados
+Info (12021): Found 1 design units, including 1 entities, in source file maquinadeestadosouvinte.v
+    Info (12023): Found entity 1: MaquinaDeEstadosOuvinte
+Info (12021): Found 1 design units, including 1 entities, in source file cache.v
+    Info (12023): Found entity 1: cache
+Info (12021): Found 1 design units, including 1 entities, in source file upcount.v
+    Info (12023): Found entity 1: upcount
+Info (12021): Found 1 design units, including 1 entities, in source file meminst.v
+    Info (12023): Found entity 1: MemInst
+Info (12021): Found 1 design units, including 1 entities, in source file memram.v
+    Info (12023): Found entity 1: memRam
+Info (12127): Elaborating entity "Snooping" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Snooping.v(21): object "auxWriteBackOuvinte" assigned a value but never read
+Warning (12125): Using design file counter.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: counter
+Info (12128): Elaborating entity "counter" for hierarchy "counter:Counter"
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "counter:Counter|lpm_counter:LPM_COUNTER_component"
+Info (12130): Elaborated megafunction instantiation "counter:Counter|lpm_counter:LPM_COUNTER_component"
+Info (12133): Instantiated megafunction "counter:Counter|lpm_counter:LPM_COUNTER_component" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "UP"
+    Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
+    Info (12134): Parameter "lpm_width" = "8"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_vhi.tdf
+    Info (12023): Found entity 1: cntr_vhi
+Info (12128): Elaborating entity "cntr_vhi" for hierarchy "counter:Counter|lpm_counter:LPM_COUNTER_component|cntr_vhi:auto_generated"
+Info (12128): Elaborating entity "MemInst" for hierarchy "MemInst:MemIntrucoes"
+Warning (10030): Net "instrucoes.data_a" at MemInst.v(12) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "instrucoes.waddr_a" at MemInst.v(12) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "instrucoes.we_a" at MemInst.v(12) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "memRam" for hierarchy "memRam:Mem"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "memRam:Mem|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "memRam:Mem|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "memRam:Mem|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "memRam.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV GX"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "32"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "5"
+    Info (12134): Parameter "width_a" = "7"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_29i1.tdf
+    Info (12023): Found entity 1: altsyncram_29i1
+Info (12128): Elaborating entity "altsyncram_29i1" for hierarchy "memRam:Mem|altsyncram:altsyncram_component|altsyncram_29i1:auto_generated"
+Info (12128): Elaborating entity "cache" for hierarchy "cache:P0"
+Warning (10036): Verilog HDL or VHDL warning at cache.v(49): object "TagAtual" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at cache.v(79): truncated value with size 3 to match size of target (2)
+Warning (10235): Verilog HDL Always Construct warning at cache.v(90): variable "tagProcessador" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at cache.v(141): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at cache.v(141): all case item expressions in this case statement are onehot
+Warning (10235): Verilog HDL Always Construct warning at cache.v(157): variable "writeback" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(158): variable "posicaoTag" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(160): variable "posicaoTag" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(163): variable "estadoResultante" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(163): variable "posicaoTag" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(164): variable "HitMissAtual" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(166): variable "posicaoTag" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(170): variable "posicaoTag" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(174): variable "HitMissAtual" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(175): variable "posicaoTag" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(177): variable "posicaoTag" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(187): variable "achouBuscaInput" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(188): variable "resultadoRecebidoBusca" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(188): variable "posicaoTag" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(189): variable "posicaoTag" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(201): variable "valorRecebidoDaMemoria" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(201): variable "posicaoTag" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(202): variable "posicaoTag" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(245): variable "inputBusca" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(245): variable "abortaAcessoMemoria" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(247): variable "posicaoTagOuvinte" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(250): variable "existeTagOuvinte" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(251): variable "estadoResultanteOuvinte" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at cache.v(251): variable "posicaoTagOuvinte" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10240): Verilog HDL Always Construct warning at cache.v(78): inferring latch(es) for variable "valorRetorno", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at cache.v(78): inferring latch(es) for variable "Done", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at cache.v(78): inferring latch(es) for variable "ExisteTag", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at cache.v(78): inferring latch(es) for variable "HitMissAtual", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at cache.v(78): inferring latch(es) for variable "EstadoAtual", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at cache.v(78): inferring latch(es) for variable "buscaCache", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at cache.v(78): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at cache.v(78): inferring latch(es) for variable "posicaoTag", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at cache.v(78): inferring latch(es) for variable "TagMapeamento", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at cache.v(78): inferring latch(es) for variable "posicaoTagMapeamento", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at cache.v(78): inferring latch(es) for variable "existeTagOuvinte", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at cache.v(78): inferring latch(es) for variable "resultadoBusca", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at cache.v(78): inferring latch(es) for variable "estadoOuvinte", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at cache.v(78): inferring latch(es) for variable "posicaoTagOuvinte", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at cache.v(78): inferring latch(es) for variable "RunMaquinaDeEstadosOuvinte", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "RunMaquinaDeEstadosOuvinte" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[0]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[1]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[2]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[3]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[4]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[5]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[6]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[7]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[8]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[9]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[10]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[11]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[12]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[13]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[14]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[15]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[16]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[17]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[18]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[19]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[20]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[21]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[22]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[23]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[24]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[25]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[26]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[27]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[28]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[29]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[30]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagOuvinte[31]" at cache.v(211)
+Info (10041): Inferred latch for "estadoOuvinte[0]" at cache.v(211)
+Info (10041): Inferred latch for "estadoOuvinte[1]" at cache.v(211)
+Info (10041): Inferred latch for "resultadoBusca[0]" at cache.v(211)
+Info (10041): Inferred latch for "resultadoBusca[1]" at cache.v(211)
+Info (10041): Inferred latch for "resultadoBusca[2]" at cache.v(211)
+Info (10041): Inferred latch for "resultadoBusca[3]" at cache.v(211)
+Info (10041): Inferred latch for "resultadoBusca[4]" at cache.v(211)
+Info (10041): Inferred latch for "resultadoBusca[5]" at cache.v(211)
+Info (10041): Inferred latch for "resultadoBusca[6]" at cache.v(211)
+Info (10041): Inferred latch for "existeTagOuvinte" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[0]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[1]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[2]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[3]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[4]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[5]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[6]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[7]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[8]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[9]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[10]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[11]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[12]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[13]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[14]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[15]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[16]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[17]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[18]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[19]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[20]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[21]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[22]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[23]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[24]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[25]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[26]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[27]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[28]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[29]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[30]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTagMapeamento[31]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[0]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[1]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[2]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[3]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[4]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[5]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[6]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[7]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[8]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[9]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[10]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[11]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[12]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[13]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[14]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[15]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[16]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[17]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[18]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[19]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[20]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[21]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[22]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[23]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[24]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[25]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[26]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[27]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[28]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[29]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[30]" at cache.v(211)
+Info (10041): Inferred latch for "posicaoTag[31]" at cache.v(211)
+Info (10041): Inferred latch for "buscaCache" at cache.v(211)
+Info (10041): Inferred latch for "EstadoAtual[0]" at cache.v(211)
+Info (10041): Inferred latch for "EstadoAtual[1]" at cache.v(211)
+Info (10041): Inferred latch for "HitMissAtual" at cache.v(211)
+Info (10041): Inferred latch for "tags[0][0]" at cache.v(211)
+Info (10041): Inferred latch for "tags[0][1]" at cache.v(211)
+Info (10041): Inferred latch for "tags[0][2]" at cache.v(211)
+Info (10041): Inferred latch for "tags[0][3]" at cache.v(211)
+Info (10041): Inferred latch for "tags[0][4]" at cache.v(211)
+Info (10041): Inferred latch for "tags[1][0]" at cache.v(211)
+Info (10041): Inferred latch for "tags[1][1]" at cache.v(211)
+Info (10041): Inferred latch for "tags[1][2]" at cache.v(211)
+Info (10041): Inferred latch for "tags[1][3]" at cache.v(211)
+Info (10041): Inferred latch for "tags[1][4]" at cache.v(211)
+Info (10041): Inferred latch for "tags[2][0]" at cache.v(211)
+Info (10041): Inferred latch for "tags[2][1]" at cache.v(211)
+Info (10041): Inferred latch for "tags[2][2]" at cache.v(211)
+Info (10041): Inferred latch for "tags[2][3]" at cache.v(211)
+Info (10041): Inferred latch for "tags[2][4]" at cache.v(211)
+Info (10041): Inferred latch for "tags[3][0]" at cache.v(211)
+Info (10041): Inferred latch for "tags[3][1]" at cache.v(211)
+Info (10041): Inferred latch for "tags[3][2]" at cache.v(211)
+Info (10041): Inferred latch for "tags[3][3]" at cache.v(211)
+Info (10041): Inferred latch for "tags[3][4]" at cache.v(211)
+Info (10041): Inferred latch for "Estado[0][0]" at cache.v(211)
+Info (10041): Inferred latch for "Estado[0][1]" at cache.v(211)
+Info (10041): Inferred latch for "Estado[1][0]" at cache.v(211)
+Info (10041): Inferred latch for "Estado[1][1]" at cache.v(211)
+Info (10041): Inferred latch for "Estado[2][0]" at cache.v(211)
+Info (10041): Inferred latch for "Estado[2][1]" at cache.v(211)
+Info (10041): Inferred latch for "Estado[3][0]" at cache.v(211)
+Info (10041): Inferred latch for "Estado[3][1]" at cache.v(211)
+Info (10041): Inferred latch for "Done" at cache.v(211)
+Info (10041): Inferred latch for "valorRetorno[0]" at cache.v(211)
+Info (10041): Inferred latch for "valorRetorno[1]" at cache.v(211)
+Info (10041): Inferred latch for "valorRetorno[2]" at cache.v(211)
+Info (10041): Inferred latch for "valorRetorno[3]" at cache.v(211)
+Info (10041): Inferred latch for "valorRetorno[4]" at cache.v(211)
+Info (10041): Inferred latch for "valorRetorno[5]" at cache.v(211)
+Info (10041): Inferred latch for "valorRetorno[6]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[0][0]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[0][1]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[0][2]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[0][3]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[0][4]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[0][5]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[0][6]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[1][0]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[1][1]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[1][2]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[1][3]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[1][4]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[1][5]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[1][6]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[2][0]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[2][1]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[2][2]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[2][3]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[2][4]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[2][5]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[2][6]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[3][0]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[3][1]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[3][2]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[3][3]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[3][4]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[3][5]" at cache.v(211)
+Info (10041): Inferred latch for "Dados[3][6]" at cache.v(211)
+Info (12128): Elaborating entity "upcount" for hierarchy "cache:P0|upcount:Tstep"
+Info (12128): Elaborating entity "MaquinaDeEstados" for hierarchy "cache:P0|MaquinaDeEstados:maquina"
+Info (12128): Elaborating entity "MaquinaDeEstadosOuvinte" for hierarchy "cache:P0|MaquinaDeEstadosOuvinte:maquinaOuvinte"
+Info (10264): Verilog HDL Case Statement information at MaquinaDeEstadosOuvinte.v(40): all case item expressions in this case statement are onehot
+Info (10264): Verilog HDL Case Statement information at MaquinaDeEstadosOuvinte.v(28): all case item expressions in this case statement are onehot
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "memRam:Mem|altsyncram:altsyncram_component|altsyncram_29i1:auto_generated|q_a[0]"
+        Warning (14320): Synthesized away node "memRam:Mem|altsyncram:altsyncram_component|altsyncram_29i1:auto_generated|q_a[1]"
+        Warning (14320): Synthesized away node "memRam:Mem|altsyncram:altsyncram_component|altsyncram_29i1:auto_generated|q_a[2]"
+        Warning (14320): Synthesized away node "memRam:Mem|altsyncram:altsyncram_component|altsyncram_29i1:auto_generated|q_a[3]"
+        Warning (14320): Synthesized away node "memRam:Mem|altsyncram:altsyncram_component|altsyncram_29i1:auto_generated|q_a[4]"
+        Warning (14320): Synthesized away node "memRam:Mem|altsyncram:altsyncram_component|altsyncram_29i1:auto_generated|q_a[5]"
+        Warning (14320): Synthesized away node "memRam:Mem|altsyncram:altsyncram_component|altsyncram_29i1:auto_generated|q_a[6]"
+Info (17049): 17 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "RunFirst"
+    Warning (15610): No output dependent on input pin "clock"
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 61 warnings
+    Info: Peak virtual memory: 4662 megabytes
+    Info: Processing ended: Tue Sep 14 13:24:35 2021
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

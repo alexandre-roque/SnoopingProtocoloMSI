@@ -1,0 +1,566 @@
+# Reading F:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Snooping_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying F:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied F:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4 {C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/Snooping.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Snooping
+# 
+# Top level modules:
+# 	Snooping
+# vlog -vlog01compat -work work +incdir+C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4 {C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/MaquinaDeEstados.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MaquinaDeEstados
+# 
+# Top level modules:
+# 	MaquinaDeEstados
+# vlog -vlog01compat -work work +incdir+C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4 {C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/MaquinaDeEstadosOuvinte.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MaquinaDeEstadosOuvinte
+# 
+# Top level modules:
+# 	MaquinaDeEstadosOuvinte
+# vlog -vlog01compat -work work +incdir+C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4 {C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/cache.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cache
+# 
+# Top level modules:
+# 	cache
+# vlog -vlog01compat -work work +incdir+C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4 {C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/upcount.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module upcount
+# 
+# Top level modules:
+# 	upcount
+# vlog -vlog01compat -work work +incdir+C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4 {C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/MemInst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MemInst
+# 
+# Top level modules:
+# 	MemInst
+# vlog -vlog01compat -work work +incdir+C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4 {C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/memRam.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module memRam
+# 
+# Top level modules:
+# 	memRam
+# vlog -vlog01compat -work work +incdir+C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4 {C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/counter.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4 {C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/simula.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module simula
+# 
+# Top level modules:
+# 	simula
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  simula
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps simula 
+# Loading work.simula
+# Loading work.Snooping
+# Loading work.counter
+# Loading lpm_ver.lpm_counter
+# Loading work.MemInst
+# Loading work.memRam
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.cache
+# Loading work.upcount
+# Loading work.MaquinaDeEstados
+# Loading work.MaquinaDeEstadosOuvinte
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# 
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# Intrucao:   0
+# P0
+# Coherency state	Address tag	 Data
+# I                     0               10
+# S                     8                8
+# M                    10               30
+# I                    18               10
+# 
+# P1
+# Coherency state	Address tag	 Data
+# I                     0               10
+# M                    28               68
+# I                    10               10
+# S                    18               19
+# 
+# P3
+# Coherency state	Address tag	 Data
+# S                    20               20
+# S                     8                8
+# I                    10               10
+# I                    18               10
+# 
+# saidaBus:  read miss
+# Valor Lido P0:  x  P1:  x P3:  x
+#     STATEMENT :: time is 1
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# 
+# 
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# Intrucao:   0
+# P0
+# Coherency state	Address tag	 Data
+# S                    20               20
+# S                     8                8
+# M                    10               30
+# I                    18               10
+# 
+# P1
+# Coherency state	Address tag	 Data
+# I                     0               10
+# M                    28               68
+# I                    10               10
+# S                    18               19
+# 
+# P3
+# Coherency state	Address tag	 Data
+# S                    20               20
+# S                     8                8
+# I                    10               10
+# I                    18               10
+# 
+# saidaBus: 
+# Valor Lido P0: 20  P1:  x P3:  x
+#     STATEMENT :: time is 140
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# 
+# 
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# Intrucao:   1
+# P0
+# Coherency state	Address tag	 Data
+# M                    20               80
+# S                     8                8
+# M                    10               30
+# I                    18               10
+# 
+# P1
+# Coherency state	Address tag	 Data
+# I                     0               10
+# M                    28               68
+# I                    10               10
+# S                    18               19
+# 
+# P3
+# Coherency state	Address tag	 Data
+# I                    20               20
+# S                     8                8
+# I                    10               10
+# I                    18               10
+# 
+# saidaBus:  invalidade
+# Valor Lido P0:  x  P1:  x P3:  x
+#     STATEMENT :: time is 220
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# 
+# 
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# Intrucao:   2
+# P0
+# Coherency state	Address tag	 Data
+# M                    20               80
+# S                     8                8
+# M                    10               30
+# I                    18               10
+# 
+# P1
+# Coherency state	Address tag	 Data
+# I                     0               10
+# M                    28               68
+# I                    10               10
+# S                    18               19
+# 
+# P3
+# Coherency state	Address tag	 Data
+# I                    20               20
+# S                     8                8
+# I                    10               10
+# I                    18               10
+# 
+# saidaBus: 
+# Valor Lido P0:  x  P1:  x P3:  x
+# WritebackOuvinte: Tag:20 e Valor: 80
+#     STATEMENT :: time is 260
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# 
+# 
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# Intrucao:   2
+# P0
+# Coherency state	Address tag	 Data
+# I                    20               80
+# S                     8                8
+# M                    10               30
+# I                    18               10
+# 
+# P1
+# Coherency state	Address tag	 Data
+# I                     0               10
+# M                    28               68
+# I                    10               10
+# S                    18               19
+# 
+# P3
+# Coherency state	Address tag	 Data
+# M                    20               80
+# S                     8                8
+# I                    10               10
+# I                    18               10
+# 
+# saidaBus:  write miss
+# Valor Lido P0:  x  P1:  x P3:  x
+#     STATEMENT :: time is 300
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# 
+# 
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# Intrucao:   3
+# P0
+# Coherency state	Address tag	 Data
+# I                    20               80
+# S                     8                8
+# M                    10               30
+# I                    18               10
+# 
+# P1
+# Coherency state	Address tag	 Data
+# I                     0               10
+# M                    28               68
+# I                    10               10
+# S                    18               19
+# 
+# P3
+# Coherency state	Address tag	 Data
+# M                    20               80
+# S                     8                8
+# I                    10               10
+# I                    18               10
+# 
+# saidaBus: 
+# Valor Lido P0:  x  P1:  x P3:  x
+# WritebackOuvinte: Tag:10 e Valor: 30
+#     STATEMENT :: time is 340
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# 
+# 
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# Intrucao:   3
+# P0
+# Coherency state	Address tag	 Data
+# I                    20               80
+# S                     8                8
+# S                    10               30
+# I                    18               10
+# 
+# P1
+# Coherency state	Address tag	 Data
+# I                     0               10
+# M                    28               68
+# S                    10               30
+# S                    18               19
+# 
+# P3
+# Coherency state	Address tag	 Data
+# M                    20               80
+# S                     8                8
+# I                    10               10
+# I                    18               10
+# 
+# saidaBus: 
+# Valor Lido P0:  x  P1: 30 P3:  x
+#     STATEMENT :: time is 420
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# 
+# 
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# Intrucao:   4
+# P0
+# Coherency state	Address tag	 Data
+# I                    20               80
+# S                     8                8
+# I                    10               30
+# I                    18               10
+# 
+# P1
+# Coherency state	Address tag	 Data
+# I                     0               10
+# M                    28               68
+# I                    10               30
+# S                    18               19
+# 
+# P3
+# Coherency state	Address tag	 Data
+# M                    20               80
+# S                     8                8
+# M                    10               30
+# I                    18               10
+# 
+# saidaBus:  write miss
+# Valor Lido P0:  x  P1:  x P3:  x
+#     STATEMENT :: time is 500
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# 
+# 
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# Intrucao:   5
+# P0
+# Coherency state	Address tag	 Data
+# I                    20               80
+# S                     8                8
+# I                    10               30
+# I                    18               10
+# 
+# P1
+# Coherency state	Address tag	 Data
+# I                     0               10
+# M                    28               68
+# I                    10               30
+# S                    18               19
+# 
+# P3
+# Coherency state	Address tag	 Data
+# M                    20               80
+# S                     8                8
+# M                    10               30
+# I                    18               10
+# 
+# saidaBus: 
+# Valor Lido P0:  x  P1:  x P3: 30
+#     STATEMENT :: time is 580
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# 
+# 
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# Intrucao:   6
+# P0
+# Coherency state	Address tag	 Data
+# I                    20               80
+# M                     8               48
+# I                    10               30
+# I                    18               10
+# 
+# P1
+# Coherency state	Address tag	 Data
+# I                     0               10
+# M                    28               68
+# I                    10               30
+# S                    18               19
+# 
+# P3
+# Coherency state	Address tag	 Data
+# M                    20               80
+# I                     8                8
+# M                    10               30
+# I                    18               10
+# 
+# saidaBus:  invalidade
+# Valor Lido P0:  x  P1:  x P3:  x
+#     STATEMENT :: time is 660
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# 
+# 
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# Intrucao:   7
+# P0
+# Coherency state	Address tag	 Data
+# I                    20               80
+# M                     8               48
+# M                    30               78
+# I                    18               10
+# 
+# P1
+# Coherency state	Address tag	 Data
+# I                     0               10
+# M                    28               68
+# I                    10               30
+# S                    18               19
+# 
+# P3
+# Coherency state	Address tag	 Data
+# M                    20               80
+# I                     8                8
+# M                    10               30
+# I                    18               10
+# 
+# saidaBus:  write miss
+# Valor Lido P0:  x  P1:  x P3:  x
+#     STATEMENT :: time is 740
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# 
+# 
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# Intrucao:   8
+# P0
+# Coherency state	Address tag	 Data
+# I                    20               80
+# M                     8               48
+# M                    30               78
+# I                    18               10
+# 
+# P1
+# Coherency state	Address tag	 Data
+# I                     0               10
+# M                    28               68
+# I                    10               30
+# S                    18               19
+# 
+# P3
+# Coherency state	Address tag	 Data
+# M                    20               80
+# I                     8                8
+# M                    10               30
+# I                    18               10
+# 
+# saidaBus: 
+# Valor Lido P0:  x  P1:  x P3:  x
+# WritebackOuvinte: Tag:30 e Valor: 78
+#     STATEMENT :: time is 780
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# 
+# 
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# Intrucao:   8
+# P0
+# Coherency state	Address tag	 Data
+# I                    20               80
+# M                     8               48
+# I                    30               78
+# I                    18               10
+# 
+# P1
+# Coherency state	Address tag	 Data
+# I                     0               10
+# M                    28               68
+# I                    10               30
+# S                    18               19
+# 
+# P3
+# Coherency state	Address tag	 Data
+# M                    20               80
+# I                     8                8
+# M                    30               78
+# I                    18               10
+# 
+# saidaBus:  write miss
+# Valor Lido P0:  x  P1:  x P3:  x
+# Writeback Principal: Tag:10 e Valor: 30
+#     STATEMENT :: time is 820
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# 
+# 
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# Intrucao:   9
+# P0
+# Coherency state	Address tag	 Data
+# I                    20               80
+# M                     8               48
+# I                    30               78
+# I                    18               10
+# 
+# P1
+# Coherency state	Address tag	 Data
+# I                     0               10
+# M                    28               68
+# I                    10               30
+# S                    18               19
+# 
+# P3
+# Coherency state	Address tag	 Data
+# M                    20               80
+# I                     8                8
+# M                    30               78
+# I                    18               10
+# 
+# saidaBus: 
+# Valor Lido P0:  x  P1:  x P3:  x
+# WritebackOuvinte: Tag: 8 e Valor: 48
+#     STATEMENT :: time is 860
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# 
+# 
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# Intrucao:   9
+# P0
+# Coherency state	Address tag	 Data
+# I                    20               80
+# S                     8               48
+# I                    30               78
+# I                    18               10
+# 
+# P1
+# Coherency state	Address tag	 Data
+# I                     0               10
+# S                     8               48
+# I                    10               30
+# S                    18               19
+# 
+# P3
+# Coherency state	Address tag	 Data
+# M                    20               80
+# I                     8                8
+# M                    30               78
+# I                    18               10
+# 
+# saidaBus: 
+# Valor Lido P0:  x  P1: 48 P3:  x
+#     STATEMENT :: time is 940
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# 
+# 
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# Intrucao:  10
+# P0
+# Coherency state	Address tag	 Data
+# I                    20               80
+# S                     8               48
+# I                    30               78
+# I                    18               10
+# 
+# P1
+# Coherency state	Address tag	 Data
+# I                     0               10
+# S                    28               68
+# I                    10               30
+# S                    18               19
+# 
+# P3
+# Coherency state	Address tag	 Data
+# M                    20               80
+# I                     8                8
+# M                    30               78
+# I                    18               10
+# 
+# saidaBus: 
+# Valor Lido P0:  x  P1: 68 P3:  x
+#     STATEMENT :: time is 1140
+# +++++++++++++++++++++++++++++++++++++++++++++++++
+# 
+# ** Note: $finish    : C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/simula.v(137)
+#    Time: 1402 ps  Iteration: 0  Instance: /simula
+# 1
+# Break in Module simula at C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/simula.v line 137
+# Simulation Breakpoint: 1
+# Break in Module simula at C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/simula.v line 137
+# MACRO ./Snooping_run_msim_rtl_verilog.do PAUSED at line 24

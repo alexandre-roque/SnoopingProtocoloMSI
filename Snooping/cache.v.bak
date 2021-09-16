@@ -1,0 +1,13 @@
+/*
+Prática IV - Modulo das caches
+Alunos: Alexandre Roque e Vitor Santana.
+Disciplina: Arquitetura e Organização de Computadores II.
+Professora: Daniela Cristina Cascini Kupsch.
+*/
+
+module cache(inst);
+	input [7:0] inst;
+	
+	
+	
+endmodule

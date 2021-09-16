@@ -1,0 +1,11 @@
+/*
+Prática IV - Modulo do topLevel do Snooping
+Alunos: Alexandre Roque e Vitor Santana.
+Disciplina: Arquitetura e Organização de Computadores II.
+Professora: Daniela Cristina Cascini Kupsch.
+*/
+
+module Snooping(clock,tempo);
+
+
+endmodule

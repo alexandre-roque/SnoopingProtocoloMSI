@@ -1,0 +1,51 @@
+/*
+Prática IV - Modulo da Maquina de estados do ouvinte
+Alunos: Alexandre Roque e Vitor Santana.
+Disciplina: Arquitetura e Organização de Computadores II.
+Professora: Daniela Cristina Cascini Kupsch.
+*/
+
+module MaquinaDeEstadosOuvinte(estado, estadoResultante, bus, writeback);
+	input [1:0] estado;
+	input [1:0] bus;
+	output [1:0] estadoResultante;
+	output writeback;
+	/*
+		Shared 		(01) 	->	Invalidate 		(10)	-> Invalid 	(00)
+		Shared 		(01)	-> Write miss 		(01)	-> Invalid 	(00)
+		Shared 		(01)	-> CPU read miss 	(00)	-> Shared  	(01)
+		
+		Exclusive 	(10)	->	Read miss		(00)	->	Shared	(01)	WRITEBACK
+		Exclusive 	(10)	->	Write miss		(01)	->	Invalid	(00)	WRITEBACK
+	
+	*/
+	
+	always@(estado, bus) begin
+		writeback = 0;
+		estadoResultante = 2'b11;
+		case(estado)
+			2'b01:
+				case(bus)
+					2'b10:
+						estadoResultante = 2'b00;
+					2'b01:
+						estadoResultante = 2'b00;
+					2'b00:
+						estadoResultante = 2'b01;
+				default begin end
+				endcase
+			2'b10:
+				case(bus)
+					2'b01:
+						estadoResultante = 2'b00;
+						writeback = 1;
+					2'b00:
+						estadoResultante = 2'b01;
+						writeback = 1;
+				default begin end
+				endcase		
+		default begin end
+		endcase
+	end
+
+endmodule

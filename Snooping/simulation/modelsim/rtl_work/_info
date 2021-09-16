@@ -1,0 +1,190 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\alexa\Documents\Repositorios\LAOC-2\Praticas\Pratica4\simulation\modelsim
+vcache
+I2CnnGG=4WD=Qaf_^FU6KK0
+VRI^hZ=NF:TH>g3kBABN4W3
+Z1 dC:\Users\alexa\Documents\Repositorios\LAOC-2\Praticas\Pratica4\simulation\modelsim
+w1631636671
+8C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/cache.v
+FC:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/cache.v
+L0 8
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4 -O0
+!i10b 1
+!s100 QKz]3=L6HRhbkWhRkA8lA2
+!s85 0
+!s108 1631636702.447000
+!s107 C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/cache.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4|C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/cache.v|
+!s101 -O0
+vcounter
+IfYoNF_9oYi16JWJfL^0<91
+VEiUIC[U:`c>eo7R=TcNI>0
+R1
+w1631194497
+8C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/counter.v
+FC:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/counter.v
+L0 39
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 NhdffdiTT>RAl:_jX0KOe2
+!s85 0
+!s108 1631636702.850000
+!s107 C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4|C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/counter.v|
+!s101 -O0
+vMaquinaDeEstados
+I`67=7D6L<Xe:Y_gh_mE:M0
+VMBzEg9EO7lNH9;j[n>3E^1
+R1
+w1631596440
+8C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/MaquinaDeEstados.v
+FC:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/MaquinaDeEstados.v
+L0 8
+R2
+r1
+31
+R3
+R4
+n@maquina@de@estados
+!i10b 1
+!s100 h=`mUAWg1PI;CZBzd1];U1
+!s85 0
+!s108 1631636702.260000
+!s107 C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/MaquinaDeEstados.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4|C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/MaquinaDeEstados.v|
+!s101 -O0
+vMaquinaDeEstadosOuvinte
+I7>fjZab9hMi8ESa:R8fRQ0
+V`O_9Fk5mhjlDWSK<z06V63
+R1
+w1631283062
+8C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/MaquinaDeEstadosOuvinte.v
+FC:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/MaquinaDeEstadosOuvinte.v
+L0 8
+R2
+r1
+31
+R3
+R4
+n@maquina@de@estados@ouvinte
+!i10b 1
+!s100 X^hUXhJ=J:XFXPO9`2P`[2
+!s85 0
+!s108 1631636702.347000
+!s107 C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/MaquinaDeEstadosOuvinte.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4|C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/MaquinaDeEstadosOuvinte.v|
+!s101 -O0
+vMemInst
+IEMzl]En14@NTW6L;@3?FK1
+V0G@knEQ9@=1S<iMR?@6fn1
+R1
+w1631315045
+8C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/MemInst.v
+FC:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/MemInst.v
+L0 8
+R2
+r1
+31
+R3
+R4
+n@mem@inst
+!i10b 1
+!s100 6e]47PzJKblCRFAF<R]ZO0
+!s85 0
+!s108 1631636702.649000
+!s107 C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/MemInst.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4|C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/MemInst.v|
+!s101 -O0
+vmemRam
+I[f8QFKA:E]_n4`LM9;VPD3
+VZ^hC`4T?9TzdcmZjBeaIc0
+R1
+w1631210937
+8C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/memRam.v
+FC:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/memRam.v
+L0 39
+R2
+r1
+31
+R3
+R4
+nmem@ram
+!i10b 1
+!s100 SEaiEm[QK1:?mZ2H7P?T:1
+!s85 0
+!s108 1631636702.749000
+!s107 C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/memRam.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4|C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/memRam.v|
+!s101 -O0
+vsimula
+!i10b 1
+!s100 @923:jKAj1VQ]MNSB_;z61
+ImXP@i<`I^la2XF57Yg[:W3
+VdhdZD?PcIDXEnl`i7l@_J2
+R1
+w1631632933
+8C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/simula.v
+FC:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/simula.v
+L0 8
+R2
+r1
+!s85 0
+31
+!s108 1631636702.952000
+!s107 C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/simula.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4|C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/simula.v|
+!s101 -O0
+R3
+R4
+vSnooping
+I8AV2V0G6T:`FokZLTO_7U1
+VM<CJVgoCzDJ9M6X;CBh2n2
+R1
+w1631631751
+8C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/Snooping.v
+FC:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/Snooping.v
+L0 8
+R2
+r1
+31
+R3
+n@snooping
+R4
+!i10b 1
+!s100 UZmMmW_82mPbaD2WaoTkQ1
+!s85 0
+!s108 1631636702.068000
+!s107 C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/Snooping.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4|C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/Snooping.v|
+!s101 -O0
+vupcount
+Ik`60EhaT_Mj[Vbl_mYcCe0
+V4h_41_G=[Hl:IHIc6hbj12
+R1
+w1631194376
+8C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/upcount.v
+FC:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/upcount.v
+L0 7
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 R@=bQ?J6dL1?WoI@i6OV72
+!s85 0
+!s108 1631636702.548000
+!s107 C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/upcount.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4|C:/Users/alexa/Documents/Repositorios/LAOC-2/Praticas/Pratica4/upcount.v|
+!s101 -O0
